@@ -2,6 +2,7 @@ const electron = require("electron");
 const {app, BrowserWindow, Menu} = electron;
 const path = require("path");
 const url = require("url");
+var mainwindow
 var menuTemplate = [
     {
         label: "file",
@@ -20,7 +21,7 @@ var menuTemplate = [
             }, {
                 label: "new",
                 click() {
-                    createWindow("add.html", 300, 200, "add Item");
+                    createWindow("add.html", 300, 200, "add Item", false, mainwindow);
                 }
             }
         ]
@@ -30,19 +31,18 @@ if (process.platform === "darwin") {
     menuTemplate.unshift({});
 }
 app.on("ready", ()=> {
-    let mainwindow = createWindow("main.html");
-    mainwindow.on("close", ()=>{
-        app.quit();
-    });
+    mainwindow = createWindow("main.html", null, null, "main", true);
     const mainMenu = Menu.buildFromTemplate(menuTemplate);
     Menu.setApplicationMenu(mainMenu);
 });
 
-function createWindow(html, width, height, title) {
+function createWindow(html, width, height, title, frame, parent) {
     const window = new BrowserWindow({
         width: width,
         height: height,
-        title: title
+        title: title,
+        frame: frame,
+        parent: parent
     });
     window.loadURL(url.format({
         pathname: path.join(__dirname, html),
