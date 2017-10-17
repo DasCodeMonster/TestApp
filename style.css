@@ -1,3 +1,37 @@
 body{
-    background-color: lightblue;
+    /*background-color: lightblue;*/
+    background-image: url("Akali_Headhunter.jpg");
+    /*background-position: center;*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+.toptitle {
+    background-color: rgb(40, 40, 88);
+    color: orangered;
+    border-style: groove;
+    border-color: lightcoral;
+    margin-left: -10px;
+    margin-top: -9px;
+    margin-right: -9px;
+    text-align: center;
+    font-size: 20px;
+}
+.text {
+    color: rgb(131, 120, 120);
+}
+#wrapper {
+    overflow: hidden;
+}
+#local {
+    float: left;
+    margin-right: 50px;
+    margin-left: 10px;
+}
+#embed {
+    float: left;
+    margin-left: 50px;
+}
+/*#hometitle {
+    font-size: 
+}*/

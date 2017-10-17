@@ -11,87 +11,97 @@
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-    <h1>Welcome!</h1>
-    <hr>
-    <h1>title2</h1>
-    <video src="lessqqAzir.mp4" autoplay="on" controls="on"></video><br>
-    <iframe src="http://youtube.com/embed/lTLqmPoJbJc?autoplay=0" frameborder="0" width="640" height="480" allowfullscreen="on"></iframe><br>
+    <div class="toptitle">
+        <h1 id="hometitle">Welcome!</h1>
+        <hr>
+    </div>
+    <h1 class="text">Videos:</h1>
+    <div id="wrapper">
+        <div id="local">
+            <video src="PentakillInfinityedge.mp4" controls="on" width="600">Konnte nicht geladen werden!</video><br>
+        </div>
+        <div id="embed">
+            <iframe src="http://youtube.com/embed/lTLqmPoJbJc?autoplay=0" frameborder="0" width="600" height="337" allowfullscreen="on"></iframe><br>
+        </div>
+    </div>
     <svg width="400" height="200">
         <rect rx="20" x="10" y="10" width="300" height="150" stroke="lightgreen" stroke-width="6" fill="blue"/>
     </svg>
-    <div class="table">
-        <table>
-            <tr>
-                <td>Phil</td>
-                <td>2001</td>
-                <td>16</td>
-            </tr>
-            <tr>
-                <td>derKrieger</td>
-                <td>550</td>
-                <td>17</td>
-            </tr>
-        </table>
+    <div class="text">
+        <div class="table">
+            <table>
+                <tr>
+                    <td>Phil</td>
+                    <td>2001</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>derKrieger</td>
+                    <td>550</td>
+                    <td>17</td>
+                </tr>
+            </table>
+        </div>
+        <ol>
+            <li>Ben</li>
+            <li>&auml;nd</li>
+            <li>Ed</li>        
+            <li>Ed</li>        
+            <li>Ed</li>        
+            <li>Ed</li>        
+            <li>Ed</li>        
+        </ol>
+        <dl>
+            <dt>Ben:</dt>
+            <dd>nicht Ed</dd>
+        </dl>
+        <form method="post" target="_blank">
+            <table>
+                <tr>
+                    <td>
+                        Vorname:
+                    </td>
+                    <td>
+                        <input type="text" name="Vorname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Nachname:
+                    </td>
+                    <td>
+                        <input type="text" name="Nachname">
+                    </td>
+                    <td>
+                        <input type="submit">                       
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Passwort:
+                    </td>
+                    <td>
+                        <input type="password" name="Passwort">
+                    </td>
+                </tr>
+            </table>
+            <input type="radio" name="gesch" value="f">female<br>
+            <input type="radio" name="gesch" value="n">neutral<br>
+            <input type="radio" name="gesch" value="m">male<br>
+            <input type="button" onclick="alert('huhu es ist noch soße da!')" value="Soßen Button"><br>
+            <input type="color", name="farbe"><br>
+            <input type="date", name="date"><br>
+            <input type="datetime" name="datetime"><br>
+            <input type="time" name="time"><br>
+            <input type="week" name="week"><br>
+            <input type="month" name="month"><br>
+            <input type="email" name="email"><br>
+            <input type="number" name="number" min="12" max="14"><br>
+            <input type="range" name="range"><br>
+            <input type="search" name="search"><br>
+            <input type="file" name="file"><br>
+        </form>
     </div>
-    <ol>
-        <li>Ben</li>
-        <li>&auml;nd</li>
-        <li>Ed</li>        
-        <li>Ed</li>        
-        <li>Ed</li>        
-        <li>Ed</li>        
-        <li>Ed</li>        
-    </ol>
-    <dl>
-        <dt>Ben:</dt>
-        <dd>nicht Ed</dd>
-    </dl>
-    <form method="post" target="_blank">
-        <table>
-            <tr>
-                <td>
-                    Vorname:
-                </td>
-                <td>
-                    <input type="text" name="Vorname">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Nachname:
-                </td>
-                <td>
-                    <input type="text" name="Nachname">
-                </td>
-                <td>
-                    <input type="submit">                       
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Passwort:
-                </td>
-                <td>
-                    <input type="password" name="Passwort">
-                </td>
-            </tr>
-        </table>
-        <input type="radio" name="gesch" value="f">female<br>
-        <input type="radio" name="gesch" value="n">neutral<br>
-        <input type="radio" name="gesch" value="m">male<br>
-        <input type="button" onclick="alert('huhu es ist noch soße da!')" value="Soßen Button"><br>
-        <input type="color", name="farbe"><br>
-        <input type="date", name="date"><br>
-        <input type="datetime" name="datetime"><br>
-        <input type="time" name="time"><br>
-        <input type="week" name="week"><br>
-        <input type="month" name="month"><br>
-        <input type="email" name="email"><br>
-        <input type="number" name="number" min="12" max="14"><br>
-        <input type="range" name="range"><br>
-        <input type="search" name="search"><br>
-        <input type="file" name="file"><br>
-    </form>
     <iframe src="https://discord.js.org/#/" frameborder="1" width="500" height="350"></iframe>
 </body>
 </html>
