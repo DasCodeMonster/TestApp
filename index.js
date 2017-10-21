@@ -31,7 +31,7 @@ if (process.platform === "darwin") {
     menuTemplate.unshift({});
 }
 app.on("ready", ()=> {
-    mainwindow = createWindow("main.html", null, null, "main", true);
+    mainwindow = createWindow("discord.html", 1480, 760, "main", false);
     const mainMenu = Menu.buildFromTemplate(menuTemplate);
     Menu.setApplicationMenu(mainMenu);
 });
@@ -53,4 +53,7 @@ function createWindow(html, width, height, title, frame, parent) {
         delete window;
     });
     return window;
+}
+function hidewindow() {
+    app.hide();
 }
