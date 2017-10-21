@@ -31,18 +31,24 @@ if (process.platform === "darwin") {
     menuTemplate.unshift({});
 }
 app.on("ready", ()=> {
-    mainwindow = createWindow("discord.html", 1480, 760, "main", false);
+    mainwindow = createWindow("discord.html", 1480, 760, "main", false, false);
+    // mainwindow = createWindow("discord.html", 100, 100, "main", false, false);
     const mainMenu = Menu.buildFromTemplate(menuTemplate);
     Menu.setApplicationMenu(mainMenu);
+    mainwindow.on("ready-to-show", () => {
+        resizeTo(screen.width, screen.height);
+        mainwindow.show();  
+    });
 });
 
-function createWindow(html, width, height, title, frame, parent) {
+function createWindow(html, width, height, title, frame, parent, show) {
     const window = new BrowserWindow({
         width: width,
         height: height,
         title: title,
         frame: frame,
-        parent: parent
+        parent: parent,
+        show: show
     });
     window.loadURL(url.format({
         pathname: path.join(__dirname, html),
